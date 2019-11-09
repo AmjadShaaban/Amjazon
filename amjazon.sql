@@ -24,7 +24,6 @@ create table Customers (
     ID INT auto_increment,
     UserName varchar(50),
     password varchar(25),
-    isAdmin boolean default false,
     primary key(ID)
 );
 
@@ -36,10 +35,10 @@ create table Orders (
 );
 
 create table OrderItems (
-    OrderItemID int,
+    ID int auto_increment,
     OrderID int,
     PorductID int,
     QuantityOrdered int,
     TotalPrice float,
-    primary key(OrderItemID)
+    primary key(ID)
 );
